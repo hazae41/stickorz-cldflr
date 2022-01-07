@@ -61,7 +61,7 @@ async function handleRequest(request) {
 
     const nonce = await rpc(
       "eth_getTransactionCount",
-      [wallet.address, "latest"])
+      [wallet.address, "pending"])
     const gasPrice = await rpc(
       "eth_gasPrice",
       [])
